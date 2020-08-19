@@ -27,5 +27,15 @@ module.exports = {
       template: path.join(__dirname, 'src/template.html'),
     }),
   ],
-  devServer: {}
+  devServer: {
+    hot: true,
+    contentBase: path.join(__dirname, './dist'),
+    host: '0.0.0.0',
+    port: 5000,
+    historyApiFallback: true,  // 该选项的作用所有的404都连接到index.html
+    proxy: {
+      // 代理到后端的服务地址，会拦截所有以api开头的请求地址
+      "/api": "http://localhost:3000"
+    },
+  }
 }
