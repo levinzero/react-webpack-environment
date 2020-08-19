@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  devtool: 'cheap-module-eval-source-map', //开发环境配置
+  // devtool: 'cheap-module-source-map', //正式环境配置
   entry: ['./src/index.js'],
   output: {
     path: path.join(__dirname, 'dist'),
