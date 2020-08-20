@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 
-import Home from "../pages/Home.jsx";
+import Home from "@/pages/Home";
 // import Count from "../pages/Count.jsx";
 const PrimaryLayout = () => (
   <div className="primary-layout">

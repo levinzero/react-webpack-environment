@@ -51,5 +51,11 @@ module.exports = {
       // 代理到后端的服务地址，会拦截所有以api开头的请求地址
       "/api": "http://localhost:3000"
     },
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
+    alias: {
+      "@": path.join(__dirname, 'src'),
+    }
   }
 }
